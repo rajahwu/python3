@@ -1,6 +1,6 @@
 <?php
-include_once(dirname(__DIR__) . '/private/initialize.php');
-require_once VENDOR_PATH . '/autoload.php';
+include_once(__DIR__ . '/../private/initialize.php');
+require_once __DIR__ . '/../vendor/autoload.php';
 
 $loader = new \Twig\Loader\FilesystemLoader('../templates');
 $twig = new \Twig\Environment($loader);
