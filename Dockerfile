@@ -4,8 +4,14 @@ FROM php:7.4-apache
 # Copy your PHP application files into the container
 COPY . /var/www/html
 
-# Install any necessary PHP extensions or dependencies
-# For example, if you're using a database, you might need to install the database driver here
+# Install Composer globally
+RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer
+
+# Change the working directory to /var/www/html
+WORKDIR /var/www/html
+
+# Install Composer dependencies
+RUN composer install
 
 # Expose port 80 for the Apache web server
 EXPOSE 80
