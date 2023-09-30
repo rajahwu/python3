@@ -1,0 +1,17 @@
+{
+    "name": "rajahwu/python3",
+    "autoload": {
+        "psr-4": {
+            "Rajahwu\\Python3\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "rajahwu",
+            "email": "vmradford@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.0"
+    }
+}
